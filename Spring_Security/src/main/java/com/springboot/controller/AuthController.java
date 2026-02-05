@@ -58,4 +58,11 @@ public class AuthController {
         String token = jwtUtil.generateToken(request.getUsername());
         return new AuthResponse(token);
     }
+
+    
+    //LOGOUT
+    @PostMapping("/logout")
+    public String logout() {
+        return "Logged out successfully";
+    }
 }
